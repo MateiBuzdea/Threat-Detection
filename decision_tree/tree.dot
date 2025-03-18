@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="fwd_header_size_tot <= 1180.0\ngini = 0.4\nsamples = 800\nvalue = [600, 120, 80]\nclass = benign", fillcolor="#eda673"] ;
+1 [label="flow_SYN_flag_count <= 0.5\ngini = 0.21\nsamples = 680\nvalue = [600, 0, 80]\nclass = benign", fillcolor="#e89253"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="response_ip_1 <= 4.0\ngini = 0.41\nsamples = 112\nvalue = [32, 0, 80]\nclass = cryptominer", fillcolor="#b388ef"] ;
+1 -> 2 ;
+3 [label="gini = 0.17\nsamples = 88\nvalue = [8, 0, 80]\nclass = cryptominer", fillcolor="#8e4de8"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 24\nvalue = [24, 0, 0]\nclass = benign", fillcolor="#e58139"] ;
+2 -> 4 ;
+5 [label="gini = 0.0\nsamples = 568\nvalue = [568, 0, 0]\nclass = benign", fillcolor="#e58139"] ;
+1 -> 5 ;
+6 [label="gini = 0.0\nsamples = 120\nvalue = [0, 120, 0]\nclass = bruteforce", fillcolor="#39e581"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
